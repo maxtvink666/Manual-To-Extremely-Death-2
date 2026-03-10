@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M.T.E.D Store</title>
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="logo">M.T.E.D</a>
+  <div class="music-btn" id="music-btn">
+  <i class="fa-solid fa-music"></i>
+</div>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#pants">Pants</a>
+    <a href="#jackets">Jackets</a>
+    <a href="#shorts">Shorts</a>
+    <a href="lookbook.html">Lookbook</a>
+    <a href="cart.html" class="cart-icon">
+<i class="fa-solid fa-cart-shopping"></i>
+<span id="cart-count">0</span>
+</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>MANUAL TO EXTREMELY DEATH</h1>
+  <p>underground fashion / dark energy</p>
+  <button class="shop-btn" onclick="document.getElementById('pants').scrollIntoView({behavior:'smooth'})">ENTER SHOP</button>
+  <div class="music-panel" id="music-panel">
+  <h4>Music Player</h4>
+  <p class="beats-credit">Music was made by the brand's co-owner</p>
+  <audio id="bg-music" autoplay></audio>
+
+  <div class="track-list" id="track-list">
+    <button class="track-btn" data-index="0">Track 1</button>
+    <button class="track-btn" data-index="1">Track 2</button>
+    <button class="track-btn" data-index="2">Track 3</button>
+    <button class="track-btn" data-index="3">Track 4</button>
+    <button class="track-btn" data-index="4">Track 5</button>
+  </div>
+
+  <div class="controls">
+    <button id="prev-track"><i class="fa-solid fa-backward"></i></button>
+    <button id="play-pause"><i class="fa-solid fa-pause"></i></button>
+    <button id="next-track"><i class="fa-solid fa-forward"></i></button>
+  </div>
+</div>
+</div>
+</section>
+<!-- Music Panel -->
+<div class="music-panel" id="music-panel">
+  <h4>Music Player</h4>
+  <audio id="bg-music" autoplay></audio>
+
+  <div class="track-list" id="track-list">
+    <button class="track-btn" data-index="0">Track 1</button>
+    <button class="track-btn" data-index="1">Track 2</button>
+    <button class="track-btn" data-index="2">Track 3</button>
+    <button class="track-btn" data-index="3">Track 4</button>
+    <button class="track-btn" data-index="4">Track 5</button>
+  </div>
+
+  <div class="controls">
+    <button id="prev-track">⏮️</button>
+    <button id="play-pause">⏸️</button>
+    <button id="next-track">⏭️</button>
+  </div>
+</div>
+<section class="products" id="pants">
+  <h2>PANTS</h2>
+  <div class="grid">
+    <div class="card" data-id="pants1">
+      <img src="images/fire.jpg">
+      <h3>FIRE PANTS</h3>
+      <div class="price">$120</div>
+    </div>
+    <div class="card" data-id="pants2">
+      <img src="images/skin1.jpg">
+      <h3>SKIN PANTS</h3>
+      <div class="price">$70</div>
+    </div>
+    <div class="card" data-id="pants3">
+      <img src="images/wax.jpg">
+      <h3>WAX PANTS</h3>
+      <div class="price">$240</div>
+    </div>
+    <div class="card" data-id="pants4">
+      <img src="images/zip.jpg">
+      <h3>ZIP PANTS</h3>
+      <div class="price">$150</div>
+    </div>
+    <div class="card" data-id="pants5">
+      <img src="images/knight.jpg">
+      <h3>KNIGHT PANTS</h3>
+      <div class="price">$180</div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="jackets">
+  <h2>JACKETS</h2>
+  <div class="grid">
+    <div class="card" data-id="jacket">
+      <img src="images/jacket.jpg">
+      <h3>OPIUM JACKET</h3>
+      <div class="price">$320</div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="shorts">
+  <h2>SHORTS</h2>
+  <div class="grid">
+    <div class="card" data-id="shorts">
+      <img src="images/shorts.jpg">
+      <h3>SHADOW SHORTS</h3>
+      <div class="price">$90</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>M.T.E.D</h3>
+      <p>Experimental underground fashion brand</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#pants">Pants</a>
+      <a href="#jackets">Jackets</a>
+      <a href="#shorts">Shorts</a>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Shipping</a>
+    </div>
+    <div class="footer-col">
+      <h4>Social</h4>
+      <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+      <a href="#"><i class="fa-brands fa-discord"></i> Discord</a>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2026 MANUAL TO EXTREMELY DEATH
+  </div>
+</footer>
+
+<script src="music.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="toast.js"></script>
+<script src="main.js"></script>
+<script src="cartCounter.js"></script>
+</body>
+</html>

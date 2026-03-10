@@ -1,0 +1,601 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#111;
+color:white;
+font-family:'Cinzel', serif;
+}
+
+a{
+color:white;
+text-decoration:none;
+transition: color 0.6s ease;
+}
+
+a:hover{
+color:#7a0000;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#111;
+position:fixed;
+top:0;
+width:100%;
+z-index:100;
+}
+
+.logo{
+font-size:28px;
+font-family:'Cinzel', serif;
+letter-spacing:3px;
+font-weight:700;
+color:white;
+transition: color 0.6s ease;
+}
+
+.logo:hover{
+color:#7a0000;
+}
+
+.nav a{
+margin-left:25px;
+font-size:16px;
+}
+
+/* HERO */
+
+.hero{
+height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+color:white;
+}
+
+.hero p{
+margin-bottom:30px;
+color:white;
+}
+
+.shop-btn{
+background:none;
+border:1px solid white;
+padding:12px 30px;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:all 0.6s ease;
+}
+
+.shop-btn:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:120px 60px;
+}
+
+.products h2{
+margin-bottom:40px;
+font-size:28px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,260px));
+gap:30px;
+justify-content:center;
+}
+
+/* CARD */
+
+.card{
+width:260px;
+height:340px;
+background:#1a1a1a;
+border-radius:10px;
+overflow:hidden;
+cursor:pointer;
+transition:transform 0.4s ease, box-shadow 0.4s ease;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(122,0,0,0.6);
+}
+
+/* IMAGE FIX */
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+/* TEXT */
+
+.card h3{
+font-size:18px;
+padding:10px;
+text-align:center;
+color:white;
+}
+
+.price{
+text-align:center;
+padding-bottom:10px;
+font-weight:bold;
+color:white;
+}
+
+/* PRODUCT PAGE */
+
+.product-wrapper{
+display:flex;
+gap:50px;
+padding:120px 60px;
+flex-wrap:wrap;
+}
+
+.slider-container{
+width:100%;
+max-width:600px;
+height:600px;
+background:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.slide{
+width:100%;
+height:100%;
+object-fit:contain;
+display:none;
+}
+
+.prev,.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:none;
+border:1px solid white;
+color:white;
+padding:10px 14px;
+cursor:pointer;
+transition:all 0.5s ease;
+}
+
+.prev:hover,.next:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+.product-info{
+max-width:400px;
+}
+
+/* CART */
+
+.cart-section{
+padding:140px 60px;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+border-bottom:1px solid #333;
+padding:12px 0;
+}
+
+.remove-btn{
+background:none;
+border:1px solid white;
+color:white;
+padding:6px 12px;
+cursor:pointer;
+transition:all 0.5s ease;
+}
+
+.remove-btn:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+.cart-total{
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+}
+
+#order-btn{
+background:none;
+border:1px solid white;
+padding:10px 20px;
+color:white;
+cursor:pointer;
+transition:all 0.5s ease;
+}
+
+#order-btn:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+/* ORDER FORM */
+
+.order-section{
+padding:140px 60px;
+max-width:500px;
+margin:auto;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+margin-bottom:20px;
+}
+
+input,select{
+padding:12px;
+background:#1a1a1a;
+border:1px solid #333;
+color:white;
+border-radius:6px;
+}
+
+input::placeholder{
+color:#777;
+}
+
+button[type="submit"]{
+background:none;
+border:1px solid white;
+color:white;
+padding:12px;
+cursor:pointer;
+transition:all 0.6s ease;
+}
+
+button[type="submit"]:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+/* LOOKBOOK */
+
+.lookbook{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.lookbook img{
+width:80%;
+height:80vh;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#111;
+padding:60px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+.footer a{
+display:block;
+margin-top:6px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .music-panel{width:90%; right:5%; top:60px;}
+  .hero h1{font-size:36px;}
+  .hero p{font-size:16px;}
+  
+.header{
+padding:20px;
+}
+
+.products{
+padding:120px 20px;
+}
+
+.product-wrapper{
+padding:120px 20px;
+flex-direction:column;
+}
+
+.cart-section{
+padding:120px 20px;
+}
+
+.order-section{
+padding:120px 20px;
+}
+
+}
+
+/* PRODUCT PAGE */
+
+.product-detail{
+padding:140px 60px;
+max-width:1200px;
+margin:auto;
+}
+
+.product-wrapper{
+display:grid;
+grid-template-columns:500px 1fr;
+gap:60px;
+align-items:start;
+}
+
+/* IMAGE SLIDER */
+
+.slider-images{
+width:100%;
+height:100%;
+}
+
+.slide{
+width:100%;
+height:100%;
+object-fit:contain;
+display:none;
+}
+
+.slide.active{
+display:block;
+}
+
+/* ARROWS */
+
+.prev,
+.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
+border:1px solid white;
+color:white;
+width:40px;
+height:40px;
+cursor:pointer;
+transition:all 0.5s ease;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+}
+
+.prev:hover,
+.next:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+/* PRODUCT INFO */
+
+.product-info{
+max-width:400px;
+}
+
+.product-info h1{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.product-info p{
+margin-bottom:20px;
+line-height:1.5;
+}
+
+.product-info button{
+background:none;
+border:1px solid white;
+padding:12px 24px;
+color:white;
+cursor:pointer;
+transition:all 0.6s ease;
+}
+
+.product-info button:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+background:none;
+border:1px solid white;
+color:white;
+padding:8px 18px;
+margin-bottom:30px;
+cursor:pointer;
+transition:all 0.5s ease;
+}
+
+.back-btn:hover{
+border-color:#7a0000;
+color:#7a0000;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.product-wrapper{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.slider-container{
+height:400px;
+}
+
+}
+.cart-icon{
+position:relative;
+}
+
+#cart-count{
+position:absolute;
+top:-8px;
+right:-10px;
+background:#7a0000;
+color:white;
+font-size:12px;
+width:18px;
+height:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+}
+
+/* Кнопка открытия панели */
+.music-btn {
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  margin-left: 20px;
+  transition: color 0.4s ease;
+}
+.music-btn:hover {
+  color: #7a0000;
+}
+
+/* Панель музыки */
+.music-panel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 260px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.music-panel.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.music-panel h4 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Подпись битов */
+.beats-credit {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Список треков */
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.track-btn {
+  padding: 6px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.track-btn:hover {
+  background: #7a0000;
+}
+
+/* Контролы */
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.controls button {
+  padding: 6px 12px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.controls button:hover {
+  border-color: #7a0000;
+  color: #7a0000;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .music-panel{width:90%; right:5%; top:60px;}
+}
+
